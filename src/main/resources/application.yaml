@@ -1,0 +1,32 @@
+spring:
+  sql:
+    init:
+      mode: always
+
+  application:
+    name: flywayapp
+
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/catalog?useLegacyDatetimeCode=false&serverTimezone=UTC
+    username: postgres
+    password: admin
+
+    hikari:
+      connection-timeout: 2000
+      maximum-pool-size: 5
+
+  jpa:
+    hibernate:
+      ddl-auto: validate
+
+  mustache:
+    servlet:
+      expose-request-attributes: true
+
+
+flyway:
+  url: jdbc:postgresql://localhost:5432/
+  schemas: pokedex
+  user: postgres
+  password: admin
