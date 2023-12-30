@@ -1,0 +1,1 @@
+INSERT INTO pokemon (name, type) VALUES ('Pikachu', 'Electric');

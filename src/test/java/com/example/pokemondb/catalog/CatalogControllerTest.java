@@ -50,7 +50,7 @@ public class CatalogControllerTest {
 
         HtmlPage page = webClient.getPage("http://localhost/");
 
-        assertThat(page.querySelectorAll(".item-title"))
+        assertThat(page.querySelectorAll(".card-title"))
                 .anyMatch((domElement -> expectedName.equals(domElement.asNormalizedText())));
     }
 

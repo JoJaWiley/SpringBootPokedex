@@ -1,9 +1,9 @@
 package com.example.pokemondb.catalog.persistence;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import jakarta.validation.constraints.NotBlank;
+
+import java.util.Objects;
 
 
 @Entity
@@ -11,6 +11,7 @@ import jakarta.validation.constraints.NotBlank;
 public class PokemonEntity {
 
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     int id;
 
     @NotBlank
@@ -18,4 +19,19 @@ public class PokemonEntity {
 
     @NotBlank
     String type;
+
+    @Override
+    public boolean equals(Object obj) {
+        if (obj instanceof PokemonEntity) {
+            PokemonEntity other = (PokemonEntity) obj;
+            return Objects.equals(this.id, other.id);
+        }
+
+        return false;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hashCode(this.id);
+    }
 }

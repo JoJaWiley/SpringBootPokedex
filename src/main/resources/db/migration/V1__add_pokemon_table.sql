@@ -1,0 +1,7 @@
+DROP TABLE IF EXISTS pokemon;
+
+CREATE TABLE pokemon (
+    id SERIAL NOT NULL PRIMARY KEY,
+    name VARCHAR(35) NOT NULL,
+    type VARCHAR(35) NOT NULL
+);
