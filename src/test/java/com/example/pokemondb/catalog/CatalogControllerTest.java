@@ -44,7 +44,7 @@ public class CatalogControllerTest {
 
     @Test
     @DisplayName("index page returns a list of Pokemon from the db")
-    void returnsListofPokemonFromDb() throws Exception {
+    void returnsListOfPokemonFromDb() throws Exception {
         final String expectedName = "Pikachu";
         mockPokemon(expectedName, "Electric");
 
