@@ -2,13 +2,14 @@
 
 <div class="container">
     <div class="row">
-        <!-- iterate over one card -->
+        {{#pokemon}}
         <div class="col-sm">
+
             <div class="card" style="width: 18rem;">
-                <img class="card-img-top" src="..." alt="Card image cap">
+                <img class="card-img-top" src="" alt="Card image cap">
                 <div class="card-body">
-                    <h5 class="card-title">Pokemon name</h5>
-                    <p class="card-text">Pokemon Type</p>
+                    <h5 class="card-title">{{name}}</h5>
+                    <p class="card-text">{{type}}</p>
                 </div>
                 <ul class="list-group list-group-flush">
                     <li class="list-group-item">Property1</li>
@@ -20,7 +21,8 @@
                     <a href="#" class="card-link">Delete</a>
                 </div>
             </div>
+
         </div>
-        <!-- end iteration -->
+        {{/pokemon}}
     </div>
 </div>
